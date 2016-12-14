@@ -11,13 +11,10 @@ import java.util.ArrayList;
 
 
 /**
- * 会话适配器
- * @Project    App_Bluetooth
- * @Package    com.android.bluetooth
- * @author     chenlin
- * @version    1.0
- * @Date       2013年6月2日
- * @Note       TODO
+ * Description:
+ * Author:Giousa
+ * Date:2016/12/14
+ * Email:65489469@qq.com
  */
 public class ChatListAdapter extends BaseAdapter {
 	private ArrayList<DeviceBean> mDatas;

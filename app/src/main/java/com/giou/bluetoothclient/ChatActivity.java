@@ -28,14 +28,10 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 /**
- * 会话界面
- * 
- * @Project App_Bluetooth
- * @Package com.android.bluetooth
- * @author chenlin
- * @version 1.0
- * @Date 2013年3月2日
- * @Note TODO
+ * Description:
+ * Author:Giousa
+ * Date:2016/12/14
+ * Email:65489469@qq.com
  */
 public class ChatActivity extends Activity implements OnItemClickListener, OnClickListener {
 	private static final int STATUS_CONNECT = 0x11;
@@ -49,21 +45,13 @@ public class ChatActivity extends Activity implements OnItemClickListener, OnCli
 	private EditText mEtMsg;
 	private DeviceListAdapter mAdapter;
 
-	/* 一些常量，代表服务器的名称 */
-	public static final String PROTOCOL_SCHEME_L2CAP = "btl2cap";
-	public static final String PROTOCOL_SCHEME_RFCOMM = "btspp";
-	public static final String PROTOCOL_SCHEME_BT_OBEX = "btgoep";
-	public static final String PROTOCOL_SCHEME_TCP_OBEX = "tcpobex";
-
-	// 蓝牙服务端socket
-	private BluetoothServerSocket mServerSocket;
 	// 蓝牙客户端socket
 	private BluetoothSocket mSocket;
 	// 设备
 	private BluetoothDevice mDevice;
 	private BluetoothAdapter mBluetoothAdapter;
 
-	// --线程类-----------------
+	// --线程-----------------
 	private ClientThread mClientThread;
 	private ReadThread mReadThread;
 
@@ -123,7 +111,7 @@ public class ChatActivity extends Activity implements OnItemClickListener, OnCli
 	}
 
 	private void initDatas() {
-		mDatas = new ArrayList<DeviceBean>();
+		mDatas = new ArrayList<>();
 		mAdapter = new DeviceListAdapter(this, mDatas);
 		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 	}
